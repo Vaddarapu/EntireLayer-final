@@ -1,0 +1,36 @@
+﻿@model ViewModel.EmployeViewModel;
+@{
+    ViewData["Tittle"] = "EditEmploye";
+}
+<form method="post" action="/Employe/updateEmploye">
+    <div>
+        <div>
+            @Html.TextBoxFor(x=> x.EmpId,new {@readOnly="readonly",@hidden="true"});
+           
+        </div>
+        <div>
+            @Html.LabelFor(x=> x.EmpName)
+            @Html.TextBoxFor(x=> x.EmpName);
+        </div>
+        <br />
+        <div>
+            @Html.LabelFor(x=> x.EmpSal)
+            @Html.TextBoxFor(x=> x.EmpSal)  
+        </div>
+        <br />
+        <div>
+            @Html.LabelFor(x=> x.EmpCity)
+            @Html.TextBoxFor(x=> x.EmpCity)
+        </div>
+        <br />
+        <div>
+            @Html.LabelFor(x=> x.EmpAddress)
+            @Html.TextBoxFor(x=> x.EmpAddress)
+        </div>
+        <div>
+            <input type="submit" value="updateemploye" />
+            
+        </div>
+
+    </div>
+</form>

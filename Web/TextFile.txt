@@ -1,0 +1,16 @@
+﻿presentation layer
+dataaccess layer
+service layer or business logic layer
+EmployeeViewModel
+in dataaccess layer we can create model class and dbcontext class after that
+in presentation layer we give connection so u go to appsettings and give connection with the 
+help of server name  and EmployeeDB
+and also  add  manage nuget packages or migrration 
+1)entity.frameworkcore 2)entity.frameworkcoresql server
+3)entity.frameworkcore.tools 4)entity.frameworkcore design
+and also give project reference to the presentation layer to service layer to dataaccesslayer
+add migration to the dal and  give the create the table in the tools of a managenut get packages
+dataAccessLayer is independent layer
+can u give the InterfaceEmployeRepository and class Employe Repository in the service layer
+and call  the  IemployeRepositories  in the service layer
+after that went to create employeeControler and create action createemployee and view also created

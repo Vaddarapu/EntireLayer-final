@@ -1,0 +1,36 @@
+﻿@model List<ViewModel.EmployeViewModel>
+@{
+    ViewData["Tittle"] = "indexPage";
+}
+
+<div>
+    @Html.ActionLink("Add Employe","CreateEmploye")
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">EmpName</th>
+            <th scope="col">Empsal</th>
+            <th scope="col">EmpAddress</th>
+            <th scope="col">EmpCity</th>
+            <th scope="col">Actions</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+
+
+        @foreach (var employeViewModel in Model)
+        {
+            <tr>
+                <th scope="row">@employeViewModel.EmpName</th>
+                <td>@employeViewModel.EmpSal</td>
+                <td>@employeViewModel.EmpAddress</td>
+                <td>@employeViewModel.EmpCity</td>
+                <td>@Html.ActionLink("Edit","EditEmploye",new{Id=employeViewModel.EmpId}) |@Html.ActionLink("Delete","DeleteEmploye",new{id=employeViewModel.EmpId})
+                ></td>
+            </tr>
+        }
+     
+    </tbody>
+</table>
